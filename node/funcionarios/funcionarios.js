@@ -3,6 +3,9 @@ const axios = require('axios')
 
 axios.get(url).then(response => {
     const funcionarios = response.data
+    funcionarios.map((funcionario) => {
+        funcionario.
+    })
     console.log(funcionarios)
 
 })
