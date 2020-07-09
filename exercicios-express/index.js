@@ -1,10 +1,30 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
 
-app.get('/opa', (req,  res, next) => {
-    console.log('Antes..')
-    next()
-})
+const saudacao = require('./saudacaoMid')
+
+// app.use(saudacao('Guilherme'))
+
+// app.use(bodyParser.json())
+
+// app.post('/corpo', (req, res) => {
+//     res.send(req.body.nome)
+// })
+
+
+// app.get('/opa', (req,  res, next) => {
+//     console.log('Antes..')
+//     next()
+// })
+
+// app.get('/clientes/:id', (req, res) => {
+//     res.send(`Cliente ${req.params.id}  selecionado`)
+// })
+
+// app.get('/clientes/relatorio', (req, res) => {
+//     res.send(`Cliente relatório: completo ${req.query.completo} ano = ${req.query.ano}`)
+// })
 
 app.get('/opa', (req, res, next) => {
     console.log('durante..')
@@ -35,10 +55,10 @@ app.get('/opa', (req, res, next) => {
     // res.send('estou bem');
 })
 
-app.get('/opa', (req,  res, ) => {
-    console.log('Depois..')
+// app.get('/opa', (req,  res, ) => {
+//     console.log('Depois..')
     
-})
+// })
 
 app.listen(3000,  () => {
     console.log('Backend executando...')
