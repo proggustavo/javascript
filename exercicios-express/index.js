@@ -4,6 +4,16 @@ const bodyParser = require('body-parser')
 
 const saudacao = require('./saudacaoMid')
 
+const usuarioApi = require('./api/usuario')
+const usuario = require('./api/usuario')
+
+const produto = require('./api/produto')
+
+produto(app, 'com param!')
+
+app.post('/usuario', usuarioApi.salvar)
+app.get('/usuario', usuarioApi.obter)
+
 // app.use(saudacao('Guilherme'))
 
 // app.use(bodyParser.json())
