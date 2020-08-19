@@ -19,6 +19,7 @@
   "homepage": "https://github.com/proggustavo/javascript#readme",
   "dependencies": {
     "lodash": "^4.17.15",
+    "nano": "^8.2.2",
     "node-schedule": "1.3.0"
   }
 }
