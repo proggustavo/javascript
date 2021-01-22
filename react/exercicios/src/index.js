@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Primeiro from './componentes/Primeiro';
 
-ReactDom.render(<h1>React</h1>, document.getElementById('root'))
+// isso é sintaxe jsx
+ReactDom.render(<Primeiro />, document.getElementById('root'))
