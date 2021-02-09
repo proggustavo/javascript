@@ -6,6 +6,14 @@ export default class Saudacao extends Component {
     nome: this.props.nome,
   };
 
+  constructor(props) {
+    super(props);
+    this.setTipo = this.setTipo.bind(this);
+    // this.setNome = this.setNome.bind(this);
+    // como o this pode variar, é preciso utilizar o bind dentro do construtor para indicar o this
+    // já que aqui o this é uma instancia de saudacao
+  }
+
   setTipo(e) {
     this.setState({
       tipo: e.target.value,
@@ -30,13 +38,14 @@ export default class Saudacao extends Component {
           type="text"
           placeholder="Tipo..."
           value={tipo}
-          onChange={(e) => this.setTipo(e)}
+          onChange={this.setTipo}
         />
         <input
           type="text"
           placeholder="Nome..."
           value={nome}
           onChange={(e) => this.setNome(e)}
+          //outra opção para chamar a função é com uma função arrow
         />
       </div>
     );
