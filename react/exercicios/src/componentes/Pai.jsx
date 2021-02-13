@@ -1,5 +1,5 @@
 import React from "react";
-import Filho from "./Filho";
+import { childrenWithProps } from "../utils/utils";
 
 export default (props) => (
   <div>
@@ -8,9 +8,10 @@ export default (props) => (
     </h1>
     <h2>Filhos</h2>
     <ul>
-      <Filho nome="Pedro" sobrenome={props.sobrenome} />
-      <Filho {...props} />
-      <Filho {...props} nome="Carla" />
+      {/* {props.children} */}
+      {/* // pra todos os filhos eu vou clonar e chamar um filho // e passar as
+      novas propriedades */}
+      {childrenWithProps(props)}
     </ul>
   </div>
 );

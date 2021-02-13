@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 // import Primeiro from './componentes/Primeiro';
 import Pai from "./componentes/Pai";
+import Filho from "./componentes/Filho";
 
 // import BomDia from  './componentes/BomDia'
 
@@ -14,6 +15,9 @@ ReactDom.render(
     <BoaNoite nome="Gustavo" /> */}
     {/* <Saudacao tipo="Bom dia" nome="João" /> */}
     <Pai nome="Gustavo" sobrenome="Rodrigues">
+      <Filho nome="Pedro" />
+      <Filho nome="Paulo" />
+      <Filho nome="Carla" />
       {/* Passando componentes filhos */}
     </Pai>
   </div>,
