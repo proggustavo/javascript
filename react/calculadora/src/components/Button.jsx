@@ -1,15 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Button.css'
 
-import Button from '../components/Button'
-import { extend } from 'lodash'
 
-export default class Calculator extends Component {
-    render(){
-        return (
-            <div className="calculator">
-                <Button />
-            </div>
-        )
-    }
+// eslint-disable-next-line import/no-anonymous-default-export
+export default props => {
+    let classes = 'button '
+    classes += props.operation ? 'operation' : ''
+    classes += props.double ? 'double' : ''
+    classes += props.triple ? 'triple' : ''
+
+    return (
+        <button 
+        onClick={e => props.click && props.click(props.label)}
+        className={classes}>
+        {props.label}
+        </button>
+    )
 }
