@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.post("/idade", calculadora.maiorDeIdade);
+app.post("/nomeidade", calculadora.nomeIdade);
 app.post("/somar", calculadora.somar);
 
 app.listen(3000, () => {

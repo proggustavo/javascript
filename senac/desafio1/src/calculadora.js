@@ -8,4 +8,9 @@ function somar(req, res) {
   res.send({ resultado: +n1 + +n2 });
 }
 
-module.exports = { maiorDeIdade, somar };
+function nomeIdade(req, res) {
+  const { nome, idade } = req.body;
+  res.send({ message: `Seu nome é ${nome} e sua idade é ${idade}` });
+}
+
+module.exports = { maiorDeIdade, somar, nomeIdade };
