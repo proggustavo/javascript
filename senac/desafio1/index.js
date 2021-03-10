@@ -8,6 +8,7 @@ app.use(express.json());
 app.post("/idade", calculadora.maiorDeIdade);
 app.post("/nomeidade", calculadora.nomeIdade);
 app.post("/somar", calculadora.somar);
+app.post("/cidade", calculadora.cidade);
 
 app.listen(3000, () => {
   console.log("Running!");
