@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 const baseUrl =
   "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/";
@@ -13,4 +13,4 @@ async function consultarCidade(cidade) {
   }
 }
 
-module.exports = { consultarCidade };
+export { consultarCidade };

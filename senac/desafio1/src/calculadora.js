@@ -1,4 +1,4 @@
-const { consultarCidade } = require("./infoCidade");
+import { consultarCidade } from "./infoCidade.js";
 
 function maiorDeIdade(req, res) {
   const { idade } = req.body;
@@ -24,4 +24,4 @@ async function cidade(req, res) {
   res.send({ info });
 }
 
-module.exports = { maiorDeIdade, somar, nomeIdade, cidade };
+export { maiorDeIdade, somar, nomeIdade, cidade };
