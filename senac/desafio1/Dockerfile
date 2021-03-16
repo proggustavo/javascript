@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /usr/srx/app
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
