@@ -8,9 +8,7 @@ router.get("/add", function (req, res, next) {
 });
 
 router.post("/add", (req, res, next) => {
-  console.log("====================================");
-  console.log("cheguei no post", req.body);
-  console.log("====================================");
+  console.log(req.body);
   Post.create({
     name: req.body.name,
     phone: req.body.phone,

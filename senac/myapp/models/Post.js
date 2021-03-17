@@ -23,7 +23,7 @@ const Post = db.sequelize.define("post", {
   },
 });
 
-module.exports = { Post };
+module.exports = Post;
 
 // Para criar novos campos nas tabelas
 Post.sync({ update: true });
