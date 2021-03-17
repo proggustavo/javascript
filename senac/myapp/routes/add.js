@@ -20,7 +20,7 @@ router.post("/add", (req, res, next) => {
       console.log("====================================");
       console.log("Postagem cadastrada");
       console.log("====================================");
-      res.redirect("/form");
+      res.redirect("/list");
     })
     .catch(function (err) {
       res.send("Erro ao realizar inscrição. Erro: " + err);

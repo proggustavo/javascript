@@ -10,7 +10,7 @@ const Post = db.sequelize.define("post", {
     allowNull: false,
   },
   date: {
-    type: db.Sequelize.STRING,
+    type: db.Sequelize.DATEONLY,
     allowNull: false,
   },
   gender: {
@@ -26,8 +26,7 @@ const Post = db.sequelize.define("post", {
 module.exports = Post;
 
 // Para criar novos campos nas tabelas
-Post.sync({ update: true });
+// Post.sync({ update: true });
 
 // para recriar as estruturas
-
-Post.sync({ force: true });
+// Post.sync({ force: true });
