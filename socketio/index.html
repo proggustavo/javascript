@@ -1,0 +1,31 @@
+<html>
+<body>
+    <h1>Um conteudo</h1>
+    <input type="text"/> 
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.js"></script>
+    <div id="msgs"></div>
+    <script>
+        const socket = io();
+        socket.on('connect', () => {
+        $("#msgs").append('connected with id: ' + socket.id + "<br>");
+        socket.emit('msg', 'I am connected ' + socket.id);
+        })
+
+        socket.on('msg', function(msg){
+            $("#msgs").append(msg+'<br>')
+        })
+
+        $(function(){
+            $('input').keydown(function(key){
+                if(key.keyCode === 13){
+                    socket.emit('msg', $(this).val());
+                    let test = $(this).val('');
+                    console.log(test);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

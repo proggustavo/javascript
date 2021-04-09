@@ -1,4 +1,5 @@
 import express from "express";
+import 'express-async-errors';
 
 //routes
 import { CriarUserRouter } from "./routes/createUser.js";

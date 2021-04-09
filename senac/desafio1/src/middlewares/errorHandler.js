@@ -3,6 +3,7 @@
 let logError = false;
 export const errorHandler = (err, req, res) => {
   if (err instanceof Error) {
+    console.log("Cheguei aqui");
     return res.status(err.statusCode).send(err.serialize());
   }
 
